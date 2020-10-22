@@ -1,0 +1,267 @@
+<div class="wrapper">
+    <div class="page-header section-dark" style="background-image: url('assets/img/download.jpg')">
+
+        <div class="filter"></div>
+
+        <div class="content-center">
+            <div class="container">
+                <div class="title-brand">
+                    <h1 class="presentation-title">Auction House</h1>
+                    <div class="fog-low">
+                        <img src="assets/img/fog-low.png" alt="">
+                    </div>
+                    <div class="fog-low right">
+                        <img src="assets/img/fog-low.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+        <h6 class=" category-absolute ml-auto mr-auto">For Latest products Scroll Down
+
+
+        </h6>
+
+
+
+    </div>
+    <div class="main">
+        <div class="tim-title">
+            <h3 class="text-center display-3"><b>Latest Products</b></h3>
+        </div>
+
+
+        <div class="flex-container">
+
+            <div>
+                <div style="position: relative;">
+                    <img [src]="'assets/img/images/'+products[0].image" width="850px" height="350px class mt-2" />
+                    <h3 id="timer1" class=" text-white font-weight-bold"
+                        style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
+                        <span id="hours1"></span> Hours :
+                        <span id="minutes1"></span> Min :
+                        <span id="seconds1"></span> Sec
+                    </h3>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-9">
+                        <h4 class="text-left text-dark font-weight-bold">{{products[0].productName}}</h4>
+                        <h5 class="text-left font-weight-normal">{{products[0].productDetails}}</h5>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn-dark mt-3 float-right font-weight-bold"
+                            (click)="placeBid(products[0].productId)" style="height: 3rem; width: 8rem;">Bid
+                            Now</button>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+
+
+
+
+            <div>
+                <div style="position: relative;">
+                    <img [src]="'assets/img/images/'+products[1].image" width="850px" height="350px class mt-2" />
+                    <h3 id="timer2" class=" text-white font-weight-bold"
+                        style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
+                        <span id="hours2"></span> Hours :
+                        <span id="minutes2"></span> Min :
+                        <span id="seconds2"></span> Sec
+                    </h3>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-9">
+                        <h4 class="text-left text-dark font-weight-bold">{{products[1].productName}}</h4>
+                        <h5 class="text-left font-weight-normal">{{products[1].productDetails}}</h5>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn-dark mt-3 float-right font-weight-bold" style="height: 3rem; width: 8rem; "
+                            (click)="placeBid(products[1].productId)">
+                            Bid Now</button>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+
+
+
+
+
+
+            <div>
+                <div style="position: relative;">
+                    <img [src]="'assets/img/images/'+products[2].image" width="850px" height="350px class mt-2" />
+                    <h3 id="timer3" class=" text-white font-weight-bold"
+                        style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
+                        <span id="hours3"></span> Hours :
+                        <span id="minutes3"></span> Min :
+                        <span id="seconds3"></span> Sec
+                    </h3>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-9">
+                        <h4 class="text-left text-dark font-weight-bold">{{products[2].productName}}</h4>
+                        <h5 class="text-left font-weight-normal">{{products[2].productDetails}}</h5>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn-dark mt-3 float-right font-weight-bold" style="height: 3rem; width: 8rem;"
+                            (click)="placeBid(products[2].productId)">Bid Now</button>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+
+
+
+
+
+
+
+            <div>
+                <div style="position: relative;">
+                    <img [src]="'assets/img/images/'+products[3].image" width="850px" height="350px class mt-2" />
+                    <h3 id="timer4" class=" text-white font-weight-bold"
+                        style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
+                        <span id="hours4"></span> Hours :
+                        <span id="minutes4"></span> Min :
+                        <span id="seconds4"></span> Sec
+                    </h3>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-9">
+                        <h4 class="text-left text-dark font-weight-bold">{{products[3].productName}}</h4>
+                        <h5 class="text-left font-weight-normal">{{products[3].productDetails}}</h5>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn-dark mt-3 float-right font-weight-bold" style="height: 3rem; width: 8rem;"
+                            (click)="placeBid(products[3].productId)">Bid Now</button>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+
+
+            <div>
+                <div style="position: relative;">
+                    <img [src]="'assets/img/images/'+products[4].image" width="850px" height="350px class mt-2" />
+                    <h3 id="timer5" class=" text-white font-weight-bold"
+                        style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
+                        <span id="hours5"></span> Hours :
+                        <span id="minutes5"></span> Min :
+                        <span id="seconds5"></span> Sec
+                    </h3>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-9">
+                        <h4 class="text-left text-dark font-weight-bold">{{products[4].productName}}</h4>
+                        <h5 class="text-left font-weight-normal">{{products[4].productDetails}}</h5>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn-dark mt-3 float-right font-weight-bold" style="height: 3rem; width: 8rem;"
+                            (click)="placeBid(products[4].productId)">Bid Now</button>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+
+        </div>
+
+
+
+
+
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 my-4">
+                        <h1 class="text-uppercase display-3">About us</h1>
+                        <p class="text">"Get It Easy"is an online auction web site aimed at taking the auction to
+                            the
+                            finger tips of aspiring bidders there by opening up the doors of the"OPEN Auction
+                            House".
+                        </p>
+                        <a href="#" class="btn login100-form-btn mt-3 text-capitalize p-3" style=" width: 10rem;">
+                            Know More
+                        </a>
+
+                    </div>
+                    <div class="col-md-6 about-images my-4 d-none d-lg-block">
+                        <img src="assets/img/murti.jpg" alt="" class="img-1 img-thumbnail about-img">
+                        <img src="assets/img/casol.jpg" alt="" class="img-2 img-thumbnail about-img">
+                        <img src="assets/img/image2.jpg" alt="" class="img-3 img-thumbnail about-img">
+                        <img src="assets/img/rrr.jpg" alt="" class="img-4 img-thumbnail about-img">
+                        <img src="assets/img/picasso.jpg" alt="" class="img-5 img-thumbnail about-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center py-5">
+            <h2 class="py-3 display-4">Contact Us</h2>
+            <div class="mx-auto heading-line"></div>
+        </div>
+
+        <div class="section section-dark ">
+            <div class="container mr-auto ml-auto">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="icons-container">
+                            <div id="map-container-google-1" class="z-depth-1-half map-container">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d974593.1632939831!2d77.84886430771282!3d17.41156957275074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1598784785106!5m2!1sen!2sin"
+                                    height="450" frameborder="0" style="border:70; width:90%; height:420px"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <form>
+                            <div class="form-group">
+                                <label class=" text-light" for="email">Email</label>
+                                <input id="email" class="form-control" type="email" aria-describedby="emailHint"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label class=" text-light" for="name">Name</label>
+                                <input id="name" class="form-control" type="text" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label class=" text-light" for="complaint">Complaint</label>
+                                <textarea id="complaint" class="form-control text-dark" placeholder="complaint"
+                                    rows="5"></textarea>
+
+                                <div class="text-center mt-4 container-login100-form-btn m-t-32">
+                                    <button id="btn-submit" type="submit" class=" btn mr-3 login100-form-btn"
+                                        style=" width: 10rem;"><a href="#"></a>Register</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="con text-center">
+
+        <div class="row justify-content-md-center sharing-area text-center">
+
+            <div class="text-center col-md-12 col-lg-8">
+                <h3 class="foot text-light">Thank you for supporting us!</h3>
+            </div>
+            <div class="text-center col-md-12 col-lg-8">
+                <h3 class="foot text-light">OnlineAuctionHouse</h3>
+                <h3 class="foot text-light">Created By </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

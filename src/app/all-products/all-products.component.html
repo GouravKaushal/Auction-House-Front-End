@@ -1,0 +1,123 @@
+<div class="bg-dark">
+
+    <div class="hed">
+        <h2 class="text-center top display-4"><b>All Products</b></h2>
+    </div>
+    <!--    <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+                <br>
+                <ngb-pagination  [collectionSize]="70" [(page)]="page1" [maxSize]="5" [rotate]="true"></ngb-pagination>
+             -->
+
+    <div class="row card-group ">
+        <div *ngFor="let product of products" class=" col-4 mb-4 ">
+            <div class="card pb-3" style="width: 22rem;">
+                <img class="card-img-top"  [src]="'assets/img/images/'+product.image" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.productName}}</h5>
+                    <h5 class="card-text">{{product.productDetails}}</h5>
+                    <h5 class="card-text">{{product.bidAmount}}</h5>
+                    <a href="#" class="btn btn-primary">Bid Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- </div>
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="assets/img/picasso.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Raj Rai</h5>
+                    <h5 class="card-text">Traditional Art</h5>
+                    <h5 class="card-text">$500</h5>
+                    <a href="#" class="btn btn-dark">Bid Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="assets/img/images-5.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Robert John</h5>
+                    <h5 class="card-text">Contemporary Art</h5>
+                    <h5 class="card-text">$500</h5>
+                    <a href="#" class="btn btn-primary">Bid Now</a>
+                </div>
+            </div> 
+        </div>-->
+    <!-- </div>
+    <div class="row">
+        <div class="col-md-3">
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="assets/img/casol.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Jack Richard</h5>
+
+                    <h5 class="card-text">Contemporary Art</h5>
+                    <h5 class="card-text">$500</h5>
+                    <a href="#" class="btn btn-primary">Bid Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="assets/img/images-7.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Ella Rose</h5>
+                    <h5 class="card-text">Contemporary Art</h5>
+                    <h5 class="card-text">$500</h5>
+                    <a href="#" class="btn btn-dark">Bid Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="assets/img/images-3.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Russel Johnson</h5>
+                    <h5 class="card-text">Modern Art</h5>
+
+                    <h5 class="card-text">$500</h5> <a href="#" class="btn btn-primary">Bid Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-3">
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="assets/img/murti.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Kriti Kolhi</h5>
+                    <h5 class="card-text">Contemporary Art</h5>
+                    <h5 class="card-text">$500</h5>
+                    <a href="#" class="btn btn-primary">Bid Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="assets/img/images-4.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Ruby Jenner</h5>
+                    <h5 class="card-text">Contemporary Art</h5>
+                    <h5 class="card-text">$500</h5> <a href="#" class="btn btn-dark">Bid Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="assets/img/images.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Ram Mahajan</h5>
+                    <h5 class="card-text">Contemporary Art</h5>
+                    <h5 class="card-text">$500</h5> <a href="#" class="btn btn-primary">Bid Now</a>
+                </div>
+            </div>
+        </div>
+
+    ß</div> -->
+</div>

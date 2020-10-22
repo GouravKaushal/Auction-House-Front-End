@@ -1,0 +1,48 @@
+<p>mail works!</p>
+<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w780">
+        <div class="card card-3">
+            <div class="card-body">
+                <!-- <h4 class="title"></h4> -->
+                <form action="" method="post" name="login" #form="ngForm" [ngSubmit]="mailForm">
+                    <div class="form-group">
+                        <label class="input--style-3">Reciepient Email ID</label>
+                        <input type="email" name="email" #emailvar="ngModel" [(ngModel)]="mail.recipientMailAddress"
+                            class="form-control my-input" required>
+                        <span *ngIf="(emailvar.dirty || emailvar.touched) && emailvar.invalid">
+                            <span class="text-danger ml-3" *ngIf="emailvar.errors?.required">Email is
+                                Required!!
+                            </span>
+
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="input--style-3">Subject</label>
+                        <input type="text" name="subject" #subjectvar="ngModel" [(ngModel)]="mail.subject"
+                            class="form-control my-input" required>
+                        <span *ngIf="(subjectvar.dirty || subjectvar.touched) && subjectvar.invalid">
+                            <span class="text-danger ml-3" *ngIf="subjectvar.errors?.required">Subject is required!!
+                            </span>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        
+
+                        <label for="exampleFormControlTextarea1" class="input--style-3">Message</label>
+                        <textarea class="form-control my-input p-5 font-weight-bold" id="exampleFormControlTextarea1" name="description"
+                            #descriptionvar="ngModel" [(ngModel)]="mail.message" rows="4" required ></textarea>
+
+                        <span *ngIf="(descriptionvar.dirty || descriptionvar.touched) && descriptionvar.invalid">
+                            <span class="text-danger ml-3" *ngIf="descriptionvar.errors?.required">Description is
+                                required!!
+                            </span>
+                        </span>
+                    </div>
+                    <div class="p-t-10 text-center p-2 mt-3">
+                        <button class="btn btn--green" (click)="sendMail()" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

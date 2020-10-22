@@ -1,0 +1,36 @@
+.column {
+    float:none;
+    width: 20%;
+    height: 550px;
+    padding: 4px;
+    margin-top:20px ;
+    margin-left: 80px;
+  }
+  .column a {
+    float: none;
+    color: black;
+    padding: 6px;
+    text-decoration: none;
+    display: block;
+ 
+  }
+  .head{
+    font-size: 25px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  /* Add a background color on hover */
+  .column a:hover {
+    background-color: #ddd;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.menu{
+    width: 420px;
+    height: 250px;
+    padding: 8px;
+    overflow: hidden;
+}

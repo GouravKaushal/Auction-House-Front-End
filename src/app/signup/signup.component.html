@@ -1,0 +1,63 @@
+<div class="limiter">
+	<div class="container-login100" style="background-image: url('assets/img/bg-01.jpg');">
+		<div class="wrap-login100 p-t-30 p-b-50">
+			<span class="login100-form-title p-b-41">
+				Registration
+			</span>
+			<form class="login100-form p-b-33 p-t-5" name="form" method="post">
+
+				<div class="wrap-input100">
+					<input class="input100" type="text" minlength="3" name="fullName" [(ngModel)]="user.fullName"
+						placeholder="FullName" required>
+					<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+				</div>
+				<div class="wrap-input100">
+					<input class="input100" type="text" name="email" [(ngModel)]="user.email" placeholder="Email"
+						required>
+					<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+
+				</div>
+
+				<div class="wrap-input100">
+					<input class="input100" type="password" name="password" [(ngModel)]="user.password"
+						placeholder="Password" id="regiterPass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+						title="Please include at least 1 uppercase character,
+						 1 lowercase character, and 1 number." required>
+					<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+					<p class="error_msg text-danger" id="pass1"></p>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<input class="input100" type="password" placeholder="Confirm Password" id="regiterCnfPass" required>
+					<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+					<p class="error_msg text-danger" id="pass2"></p>
+				</div>
+				<div class="wrap-input100" name="Phone Number">
+					<input class="input100" type="number" name="Phone Number" [(ngModel)]="user.mobileNo"
+						placeholder="Phone Number" pattern="[+]?[0-9]" required>
+					<span class="focus-input100" data-placeholder="&#xe830;"></span>
+				</div>
+				<div class=" wrap-input100 row">
+					<div class="col-6">
+						<h5 class="input100 mt-2 ml-1" placeholder="Register as">Profile</h5>
+					</div>
+					<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					<div ngbDropdown class="d-inline-block dropdown">
+						<select name="profile" [(ngModel)]="user.userProfile" class="btn text-dark mt-2 p-2 bg-transparent" id="dropdownBasic1">
+							<option value="Bidder" class="dropdown-item" selected>Bidder</option>
+							<option value="Seller" class="dropdown-item">Seller</option>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="text-center mt-4 container-login100-form-btn m-t-32">
+					<button id="btn-submit" (click)="registerUser(user)" type="submit"
+						class=" btn mr-3 login100-form-btn" style=" width: 10rem;">Register</button>
+				</div>
+
+			
+			</form>
+		</div>
+	</div>
+</div>
+<div id="dropDownSelect1"></div>

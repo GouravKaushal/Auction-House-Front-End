@@ -1,0 +1,30 @@
+<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w780">
+
+       
+        <div class="card card-3">
+            <div class="card-body">
+                <h4 class="title">Bid Product</h4>
+                <form action="" method="post" name="login" #form="ngForm" [ngSubmit]="bidForm">
+                    <div class="form-group">
+                        <label class="input--style-3">Bid Amount</label>
+                        <input type="number" min="1000" [(ngModel)]="bid.bidAmount" #bidamountvar="ngModel"
+                            name="bidAmount" class="form-control my-input" pattern="\d*" required>
+                        <span *ngIf="(bidamountvar.dirty || bidamountvar.touched) && bidamountvar.invalid">
+                            <span class="text-danger ml-3" *ngIf="bidamountvar.errors?.required">ProductAmount is
+                                Required!!
+                            </span>
+                            <span class="text-danger ml-3" *ngIf="bidamountvar.errors?.pattern">ProductAmount is not
+                                valid !!
+                            </span>
+                        </span>
+                    </div>
+                    <div class="p-t-10 text-center p-2 mt-3">
+                        <button class="btn btn--green" (click)="placeBid()"
+                            type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="col-md-6 mx-auto text-center">
+    <h2 class="header-title text-center">
+      Sell Products
+    </h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="myform form ">
+        <form action="" method="post" name="login">
+          <div class="form-group">
+            <label>Product Name</label>
+            <input type="text" name="name" [(ngModel)]="product.productName" class="form-control my-input" id="name">
+          </div>
+          <div class="form-group">
+            <label>Product Details</label>
+            <input type="text" name="productDetails" [(ngModel)]="product.productDetails" class="form-control my-input"
+              id="productDetails">
+          </div>
+          <div class="form-group">
+            <label>Product Amount</label>
+            <input type="number" min="0" [(ngModel)]="product.bidAmount" name="bidAmount" class="form-control my-input" pattern="[0-9]"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label>Product Category</label>
+            <select  [(ngModel)]="productCategory"  class="form-control my-input" name="productCategory">
+              <option  *ngFor="let cat of productCategories" [ngValue]="cat">
+                {{cat.productCategoryName}}</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label for="file">Choose File</label><input type="file" id="file"
+              (change)="handleFileInput1($event)">
+          </div>
+
+
+          <div class="text-center">
+            <button type="submit" (click)="sellProduct(product) "class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

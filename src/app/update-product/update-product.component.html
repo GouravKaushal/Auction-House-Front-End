@@ -1,0 +1,69 @@
+<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+  <div class="card card-3">
+    <div class="card-body">
+      <h2 class="title">Update Product</h2>
+      <form action="" method="post" name="login" #form="ngForm" [ngSubmit]="updateForm">
+        <div class="form-group">
+          <label class="input--style-3">Product Name</label>
+          <input type="text" id="name" name="name" class="form-control my-input p-1" #productnamevar="ngModel"
+            [(ngModel)]="product.productName" required>
+
+          <span *ngIf="(productnamevar.dirty || productnamevar.touched) && productnamevar.invalid">
+            <span class="text-danger ml-3" *ngIf="productnamevar.errors?.required">Product Name is required
+            </span>
+          </span>
+        </div>
+        <div class="form-group">
+          <label class="input--style-3">Product Details</label>
+          <input type="text" name="productDetails" #productdetailvar="ngModel" [(ngModel)]="product.productDetails"
+            class="form-control my-input" id="productDetails" required>
+          <span *ngIf="(productdetailvar.dirty || productdetailvar.touched) && productdetailvar.invalid">
+            <span class="text-danger ml-3" *ngIf="productdetailvar.errors?.required">ProductDetail is required
+            </span>
+          </span>
+        </div>
+        <div class="form-group">
+          <label class="input--style-3">Product Amount</label>
+          <input type="number"  [(ngModel)]="product.bidAmount" #bidamountvar="ngModel" name="bidAmount"
+            class="form-control my-input" pattern="\d*" required>
+          <span *ngIf="(bidamountvar.dirty || bidamountvar.touched) && bidamountvar.invalid">
+            <span class="text-danger ml-3" *ngIf="bidamountvar.errors?.required">Product Amount is required
+            </span>
+            <span class="text-danger ml-3" *ngIf="bidamountvar.errors?.pattern">Product Amount entered is invalid
+            </span>
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label class="input--style-3">Product Category</label>
+          <select [(ngModel)]="product.productCategory" class="form-control my-input" name="productType" required>
+            <option *ngFor="let category of productCategories">{{category.productCategoryName}}</option>
+          </select>
+
+        </div>
+        <div class="form-group">
+          <label class="input--style-3">Extend Closing Time(In hours)</label>
+          <input type="number" [(ngModel)]="product.date" #datevar="ngModel" name="date" class="form-control my-input"
+            pattern="\d*" required>
+          <span *ngIf="(datevar.dirty || datevar.touched) && datevar.invalid">
+            <span class="text-danger ml-3" *ngIf="datevar.errors?.required">
+              Closing time is required
+            </span>
+            <span class="text-danger ml-3" *ngIf="datevar.errors?.pattern">Closing date entered is invalid
+            </span>
+          </span>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label class=" input--style-3 ">Upload Image</label>
+            <label for="file" class="p-3 "></label><input type="file" id="file" (change)="handleFileInput1($event)"
+              class="text-light mt-3 mb-3" required>
+          </div>
+        </div>
+
+        <div class="p-t-10 text-center p-2 mt-3">
+          <button class="btn btn--green" (click)="sellProduct(product)" type="submit">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
