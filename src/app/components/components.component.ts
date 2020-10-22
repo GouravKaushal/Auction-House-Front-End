@@ -20,7 +20,7 @@ export class ComponentsComponent implements OnInit {
     date: { year: number, month: number };
     model: NgbDateStruct;
     constructor(private renderer: Renderer2, private productService: ProductService,private router:Router) {
-        this.getLatestProduct();
+        
      }
     isWeekend(date: NgbDateStruct) {
         const d = new Date(date.year, date.month - 1, date.day);
@@ -33,7 +33,7 @@ export class ComponentsComponent implements OnInit {
 
     ngOnInit() {
       
-        
+        this.getLatestProduct();
         let input_group_focus = document.getElementsByClassName('form-control');
         let input_group = document.getElementsByClassName('input-group');
         for (let i = 0; i < input_group.length; i++) {
@@ -57,10 +57,11 @@ export class ComponentsComponent implements OnInit {
             data => {
                 this.products = data.object;
                 for (let i = 0; i < this.products.length; i++) {
+                    this.timeTracker = i;
                     console.log("\n\nName "+this.products[i].productName);
                     console.log("\n\n Image "+this.products[i].image);
                     this.showTimer(this.products[i].closingDate.toString());
-                    this.timeTracker = i;
+                   
                 }
             }
         )
@@ -106,6 +107,7 @@ export class ComponentsComponent implements OnInit {
                 seconds %= 60;
 
                 if (timeTracker2 == 0) {
+                    
                     $("#hours1").text(hours);
                     $("#minutes1").text(minutes);
                     $("#seconds1").text(seconds);
