@@ -32,7 +32,7 @@ export class BidComponent implements OnInit {
     
   }
   bidForm(form: NgForm) {
-    console.log(`success`);
+    console.log(`bid success`);
   }
 
 
