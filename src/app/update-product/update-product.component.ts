@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { UpdateProduct } from './update';
+import { Product } from 'app/models/product';
+
 
 @Component({
   selector: 'app-update-product',
@@ -8,7 +9,7 @@ import { UpdateProduct } from './update';
   styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent implements OnInit {
-product:UpdateProduct=new UpdateProduct('','')
+product:Product=new Product(0,'','',0,'',null,null)
   constructor() { }
 
   ngOnInit(): void {

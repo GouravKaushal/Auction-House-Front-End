@@ -92,18 +92,18 @@ export class SellProductComponent implements OnInit {
   }
 
 
-  onUpload() {
+  // onUpload() {
 
-    const uploadData = new FormData();
-    uploadData.append('image', this.selectedFile, this.selectedFile.name);
-    this.httpClient.post('http://localhost:8080/auction/product/upload', uploadData).subscribe(
-      res => {
-        console.log(res)
-      }
-    )
+  //   const uploadData = new FormData();
+  //   uploadData.append('image', this.selectedFile, this.selectedFile.name);
+  //   this.httpClient.post('http://localhost:8080/auction/product/upload', uploadData).subscribe(
+  //     res => {
+  //       console.log(res)
+  //     }
+  //   )
 
 
-  }
+  // }
 
 
 

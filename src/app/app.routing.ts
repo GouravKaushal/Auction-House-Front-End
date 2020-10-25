@@ -10,6 +10,7 @@ import { AllProductsComponent } from './all-products/all-products.component';
 import { SellProductComponent } from './sell-product/sell-product.component';
 import { BidComponent } from './bid/bid.component';
 import { MailComponent } from './mail/mail.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'sell', component: SellProductComponent },
   { path: 'bid/:productId', component: BidComponent },
-  { path: 'mail', component: MailComponent }
+  { path: 'mail', component: MailComponent },
+  { path: 'updateProduct', component: UpdateProductComponent }
 ];
 
 @NgModule({

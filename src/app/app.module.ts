@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SellProductComponent } from './sell-product/sell-product.component';
 import { MailComponent } from './mail/mail.component';
 import { BidComponent } from './bid/bid.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { BidComponent } from './bid/bid.component';
     AllProductsComponent,
     SellProductComponent,
     MailComponent,
-    BidComponent
+    BidComponent,
+    UpdateProductComponent
     
   ],
   imports: [

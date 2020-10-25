@@ -27,18 +27,21 @@
     </div>
     <div class="main">
         <div class="tim-title">
-            <h3 *ngIf=" produtcs else noProducts" class="text-center display-3"><b>Live Products</b></h3>
+            <h3 *ngIf=" products else noProducts" class="text-center display-3"><b>Live Products</b></h3>
             <ng-template #noProducts>
-                <h3 class="text-center display-3"><b>No Live Products Avialable</b></h3>
+                <h3 class="text-center display-3"><b>No Live Products Available</b></h3>
             </ng-template>
         </div>
 
 
         <div class="flex-container">
-
+           
             <div *ngIf="products[0]">
                 <div style="position: relative;">
-                    <img [src]="'assets/img/images/'+products[0].image" width="850px" height="350px class mt-2" />
+
+                    
+                   
+                    <img [src]="products[0].image" width="850px" height="350px class mt-2" />
                     <h3 id="timer1" class=" text-white font-weight-bold"
                         style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
                         <span id="hours1"></span> Hours :
@@ -64,9 +67,9 @@
 
 
 
-            <div *ngIf="products[1]">
+            <div *ngIf="products[1] ">
                 <div style="position: relative;">
-                    <img [src]="'assets/img/images/'+products[1].image" width="850px" height="350px class mt-2" />
+                    <img [src]="products[1].image" width="850px" height="350px class mt-2" />
                     <h3 id="timer2" class=" text-white font-weight-bold"
                         style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
                         <span id="hours2"></span> Hours :
@@ -94,9 +97,9 @@
 
 
 
-            <div *ngIf="products[2]">
+            <div  *ngIf="products[2]">
                 <div style="position: relative;">
-                    <img [src]="'assets/img/images/'+products[2].image" width="850px" height="350px class mt-2" />
+                    <img [src]="products[2].image" width="850px" height="350px class mt-2" />
                     <h3 id="timer3" class=" text-white font-weight-bold"
                         style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
                         <span id="hours3"></span> Hours :
@@ -126,7 +129,7 @@
 
             <div *ngIf="products[3]">
                 <div style="position: relative;">
-                    <img [src]="'assets/img/images/'+products[3].image" width="850px" height="350px class mt-2" />
+                    <img [src]="products[3].image" width="850px" height="350px class mt-2" />
                     <h3 id="timer4" class=" text-white font-weight-bold"
                         style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
                         <span id="hours4"></span> Hours :
@@ -149,9 +152,9 @@
             </div>
 
 
-            <div *ngIf="products[4]">
+            <div  *ngIf="products[4] ">
                 <div style="position: relative;">
-                    <img [src]="'assets/img/images/'+products[4].image" width="850px" height="350px class mt-2" />
+                    <img [src]="products[4].image" width="850px" height="350px class mt-2" />
                     <h3 id="timer5" class=" text-white font-weight-bold"
                         style=" background-color :rgba(22, 18, 18, 0.5);  width:fit-content; position: absolute ; top: 45%; left :50% ;transform: translate(-50%, -50%);">
                         <span id="hours5"></span> Hours :

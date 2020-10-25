@@ -2,8 +2,10 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { Product } from 'app/models/product';
+import { User } from 'app/models/user';
 import { ProductService } from 'app/services/product.service';
 import * as $ from 'jquery';
+import { interval, Subscription ,Observable} from 'rxjs';
 
 @Component({
     selector: 'app-components',
@@ -20,8 +22,10 @@ export class ComponentsComponent implements OnInit {
     date: { year: number, month: number };
     model: NgbDateStruct;
     constructor(private renderer: Renderer2, private productService: ProductService,private router:Router) {
-        
      }
+  
+  
+
     isWeekend(date: NgbDateStruct) {
         const d = new Date(date.year, date.month - 1, date.day);
         return d.getDay() === 0 || d.getDay() === 6;
@@ -30,9 +34,13 @@ export class ComponentsComponent implements OnInit {
     isDisabled(date: NgbDateStruct, current: { month: number }) {
         return date.month !== current.month;
     }
-
+    private updateSubscription: Subscription;
     ngOnInit() {
-      
+        this.updateSubscription = interval(15000).subscribe(
+            (val) => { window.location.reload();
+          }
+      );
+    
         this.getLatestProduct();
         let input_group_focus = document.getElementsByClassName('form-control');
         let input_group = document.getElementsByClassName('input-group');
@@ -49,7 +57,7 @@ export class ComponentsComponent implements OnInit {
 
 
 
-
+    user:User=new User(0,'','','','','');
     timeTracker: number;
     products: Product[];
     getLatestProduct() {
@@ -61,8 +69,8 @@ export class ComponentsComponent implements OnInit {
                     console.log("\n\nName "+this.products[i].productName);
                     console.log("\n\n Image "+this.products[i].image);
                     this.showTimer(this.products[i].closingDate.toString());
-                   
                 }
+
             }
         )
     }

@@ -25,8 +25,6 @@ export class AllProductsComponent implements OnInit {
           for(let i=0;i<this.products.length;i++){
             console.log("Products : "+this.products[i].productName);
           }
-         
-          
       }
     )
   }
