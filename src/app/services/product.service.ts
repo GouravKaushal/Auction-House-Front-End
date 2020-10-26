@@ -56,7 +56,7 @@ export class ProductService {
 
   // Service to get productCatgory by productCategoryId
   getProductByProductCategoryId(productCategoryId:number): Observable<ProductCategory>{
-    return this.http.get<ProductCategory>(this.baseUrl + '/product/category/' + productCategoryId);
+    return this.http.get<ProductCategory>(this.baseUrl + '/product/category/categoryId/' + productCategoryId);
   }
 
   // Service to get all products within price range
@@ -69,8 +69,13 @@ export class ProductService {
     return this.http.post<any>(this.baseUrl + '/admin/add/product/category', productCategory);
   }
 
+   // Service to get productCatgory by productCategoryId
+   getProductCategoryByProductCategoryName(productCategoryName:string): Observable<any>{
+    return this.http.get<any>(this.baseUrl + '/product/category/categoryName/' + productCategoryName);
+  }
+
   // Service to update product details
-  updateProductDetails(product: Product): Observable<any>{
-    return this.http.put<any>(this.baseUrl + '/admin/update/product/' + product.productId, product);
+  updateProductDetails(product: Product,extendHours:number): Observable<any>{
+    return this.http.put<any>(this.baseUrl + '/admin/update/product/'+extendHours ,product);
   }
 }

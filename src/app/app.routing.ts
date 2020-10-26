@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'sell', component: SellProductComponent },
   { path: 'bid/:productId', component: BidComponent },
   { path: 'mail', component: MailComponent },
-  { path: 'updateProduct', component: UpdateProductComponent }
+  { path: 'updateProduct/:productId', component: UpdateProductComponent }
 ];
 
 @NgModule({

@@ -11,12 +11,16 @@
     <div class="row card-group ">
         <div *ngFor="let product of products" class=" col-4 mb-4 ">
             <div class="card pb-3" style="width: 22rem;">
-                <img class="card-img-top"  [src]="'assets/img/images/'+product.image" alt="Card image cap">
+                <img class="card-img-top"  [src]="product.image" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{product.productName}}</h5>
                     <h5 class="card-text">{{product.productDetails}}</h5>
                     <h5 class="card-text">{{product.bidAmount}}</h5>
-                    <a href="#" class="btn btn-primary">Bid Now</a>
+                    <a *ngIf="isAdmin; else showParticular" (click)="updateProduct(product.productId)" class="btn btn-primary">{{buttonContext}}</a>
+                  <ng-template  #showParticular>
+                      <a  (click)="placeBid(product.productId)" class="btn btn-primary">{{buttonContext}}</a>
+                  </ng-template>
+                    
                 </div>
             </div>
         </div>
