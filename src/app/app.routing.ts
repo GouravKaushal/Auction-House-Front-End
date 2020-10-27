@@ -12,6 +12,7 @@ import { BidComponent } from './bid/bid.component';
 import { MailComponent } from './mail/mail.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { BidHistoryComponent } from './bid-history/bid-history.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,9 @@ const routes: Routes = [
   { path: 'bid/:productId', component: BidComponent },
   { path: 'mail', component: MailComponent },
   { path: 'updateProduct/:productId', component: UpdateProductComponent },
-  { path: 'bidHistory', component: BidHistoryComponent }
+  { path: 'bidHistory', component: BidHistoryComponent },
+  { path: 'addCategory', component: AddCategoryComponent },
+
 ];
 
 @NgModule({

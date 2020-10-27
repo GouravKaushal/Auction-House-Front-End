@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="boxed">
+        <form action="" method="post" name="login" #form="ngForm" (ngSubmit)="addCategory(form)">
+            <label class="input--style-3 mt-2 ml-3 text-center font-weight-bold text-dark">Category</label>
+            <input type="text" [(ngModel)]="productCategory.productCategoryName" #categoryvar="ngModel" name="category"
+                class="form-control my-input ml-3 mr-1 p-1" pattern="\d*" required>
+            <span *ngIf="(categoryvar.dirty || categoryvar.touched) && categoryvar.invalid">
+                <span class="text-danger ml-3" *ngIf="categoryvar.errors?.required">Category is
+                    required
+                </span>
+
+            </span>
+            <div class="p-2 mt-3 text-center">
+                <button class="btn" type="submit">Add Category
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

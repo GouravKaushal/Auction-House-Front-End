@@ -18,6 +18,7 @@ import { MailComponent } from './mail/mail.component';
 import { BidComponent } from './bid/bid.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { BidHistoryComponent } from './bid-history/bid-history.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { BidHistoryComponent } from './bid-history/bid-history.component';
     MailComponent,
     BidComponent,
     UpdateProductComponent,
-    BidHistoryComponent
+    BidHistoryComponent,
+    AddCategoryComponent
     
   ],
   imports: [

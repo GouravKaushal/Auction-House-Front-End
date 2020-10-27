@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'app/models/product';
-import { ProductCategory } from 'app/models/product-category';
 import { ProductService } from 'app/services/product.service';
 
 

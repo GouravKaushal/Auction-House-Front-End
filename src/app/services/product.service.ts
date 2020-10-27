@@ -62,7 +62,6 @@ export class ProductService {
   // Service to get all products within price range
   getProductByPriceRange(minimumProductCost:number, maximumProductCost:number): Observable<any>{
     console.log("Inside Product service...");
-    
     return this.http.get<any>(this.baseUrl + '/product/' + minimumProductCost + '/' + maximumProductCost);
   }
 
