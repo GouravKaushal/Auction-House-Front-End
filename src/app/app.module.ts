@@ -17,6 +17,7 @@ import { SellProductComponent } from './sell-product/sell-product.component';
 import { MailComponent } from './mail/mail.component';
 import { BidComponent } from './bid/bid.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { BidHistoryComponent } from './bid-history/bid-history.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     SellProductComponent,
     MailComponent,
     BidComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    BidHistoryComponent
     
   ],
   imports: [

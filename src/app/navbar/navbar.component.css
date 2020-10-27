@@ -1,6 +1,5 @@
 .column {
     float:none;
-    width: 20%;
     height: 550px;
     padding: 4px;
     margin-top:20px ;
@@ -30,7 +29,7 @@
   }
 .menu{
     width: 420px;
-    height: 250px;
+    height: 400px;
     padding: 8px;
     overflow: hidden;
 }

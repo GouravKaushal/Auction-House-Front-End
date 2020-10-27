@@ -20,13 +20,12 @@ export class BidService {
     return this.http.post<any>(this.baseUrl + '/place/bid', bid);
   }
 
-  // Service to get bids history by the product id
-  getBidHistoryByProductId(productId: number): Observable<Bid[]>{
-    return this.http.get<Bid[]>(this.baseUrl + '/bid/history/' + productId);
-  }
-
   // Service to get bids by the Bidder id
   getBidsByBidderId(bidderId: number): Observable<Bid[]>{
     return this.http.get<Bid[]>(this.baseUrl + '/get/bids/bidder/' + bidderId);
+  }
+
+  getAllBids(): Observable<any>{
+    return this.http.get<any>(this.baseUrl + '/bid/history');
   }
 }

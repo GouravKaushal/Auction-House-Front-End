@@ -18,7 +18,7 @@ export class BidComponent implements OnInit {
 
 
   productId: any;
-  product:any
+  product:Product
   ngOnInit(): void {
     console.log(typeof this.router.snapshot.paramMap.get("productId"));
     this.productId= Number(this.router.snapshot.paramMap.get("productId"));

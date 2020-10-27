@@ -116,9 +116,7 @@
     .caret{
        @include center-item();
     }
-    &.navbar-transparent{
-        padding-top: 25px;
-    }
+   
     .logo-container{
         margin-top: 5px;
         .logo{
@@ -164,7 +162,7 @@
 
         &:focus,
         &:hover{
-            background-color: transparent;
+            background-color: black;
             @include opacity(1);
             color: $white-color;
         }
@@ -185,7 +183,7 @@
             @include opacity(1);
         }
         .nav .nav-item a.btn:hover{
-            background-color: transparent;
+            background-color: black;
         }
 
         .dropdown .nav-link .caret,
@@ -333,7 +331,7 @@
 
     &.navbar-default .navbar-toggle:hover,
     &.navbar-default .navbar-toggle:focus {
-        background-color: transparent;
+        background-color:black;
     }
 }
 
@@ -405,7 +403,7 @@
     .navbar-toggler-bar{
         display: block;
         position: relative;
-        width: 24px;
+        width: 29px;
         height: 2px;
         border-radius: 1px;
         margin: 0 auto;
@@ -478,7 +476,7 @@
     }
 }
 .navbar-transparent{
-    background: transparent !important;
+    background-color: black !important;
     border-bottom: 1px solid transparent;
     box-shadow: none;
 

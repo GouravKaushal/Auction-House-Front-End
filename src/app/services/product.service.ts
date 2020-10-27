@@ -55,13 +55,15 @@ export class ProductService {
   }
 
   // Service to get productCatgory by productCategoryId
-  getProductByProductCategoryId(productCategoryId:number): Observable<ProductCategory>{
-    return this.http.get<ProductCategory>(this.baseUrl + '/product/category/categoryId/' + productCategoryId);
+  getProductByProductCategoryId(productCategoryId:number): Observable<any>{
+    return this.http.get<any>(this.baseUrl + '/product/category/categoryId/' + productCategoryId);
   }
 
   // Service to get all products within price range
-  getProductByPriceRange(minimumProductCost:number, maximumProductCost:number): Observable<ProductCategory>{
-    return this.http.get<ProductCategory>(this.baseUrl + '/product/' + minimumProductCost + '/' + maximumProductCost);
+  getProductByPriceRange(minimumProductCost:number, maximumProductCost:number): Observable<any>{
+    console.log("Inside Product service...");
+    
+    return this.http.get<any>(this.baseUrl + '/product/' + minimumProductCost + '/' + maximumProductCost);
   }
 
   // Service to add new product category by the admin

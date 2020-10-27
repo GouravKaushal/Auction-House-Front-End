@@ -1,30 +1,47 @@
-<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
-    <div class="wrapper wrapper--w780">
+<div class="container">
+    <div class="text-center">
+        <img [src]="product.image" width="100%" height="400px" />
+    </div>
+    <div class="">
+        <div class="mr-auto ml-auto ">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 ">
+                    <hr>
+                    <h5>{{product.productName}}
+                    </h5>
+                    <hr>
+                    <h5>Product Details : {{product.productDetails}}</h5>
+                    <h5>Closing Date : {{product.closingDate | date:'medium'}}</h5>
+                    <h5>Bid Amount : {{product.bidAmount | currency:'INR'}}</h5>
+                    <h5>To place bid or to register for bid, registration is required.</h5>
 
-       
-        <div class="card card-3">
-            <div class="card-body">
-                <h4 class="title">Bid Product</h4>
-                <form action="" method="post" name="login" #form="ngForm" [ngSubmit]="bidForm">
-                    <div class="form-group">
-                        <label class="input--style-3">Bid Amount</label>
-                        <input type="number" min="1000" [(ngModel)]="bid.bidAmount" #bidamountvar="ngModel"
-                            name="bidAmount" class="form-control my-input" pattern="\d*" required>
-                        <span *ngIf="(bidamountvar.dirty || bidamountvar.touched) && bidamountvar.invalid">
-                            <span class="text-danger ml-3" *ngIf="bidamountvar.errors?.required">ProductAmount is
-                                Required!!
+
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="boxed mt-3">
+                        <form action="" method="post" name="login" #form="ngForm" [ngSubmit]="bidForm">
+                            <label class="input--style-3 mt-2 ml-3 text-center">Bid Amount</label>
+                            <input type="number" min="1000" [(ngModel)]="bid.bidAmount" #bidamountvar="ngModel"
+                                name="bidAmount" class="form-control my-input ml-3 mr-1 p-1" pattern="\d*" required>
+                            <span *ngIf="(bidamountvar.dirty || bidamountvar.touched) && bidamountvar.invalid">
+                                <span class="text-danger ml-3" *ngIf="bidamountvar.errors?.required">Product Amount is
+                                    required
+                                </span>
+                                <span class="text-danger ml-2" *ngIf="bidamountvar.errors?.pattern">Product Amount
+                                    entered
+                                    is
+                                    invalid
+                                </span>
                             </span>
-                            <span class="text-danger ml-3" *ngIf="bidamountvar.errors?.pattern">ProductAmount is not
-                                valid !!
-                            </span>
-                        </span>
+                            <div class="p-2 mt-3 text-center">
+                                <button class="btn" type="submit" (click)="placeBid()">Place bid
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="p-t-10 text-center p-2 mt-3">
-                        <button class="btn btn--green" (click)="placeBid()"
-                            type="submit">Submit</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
+
     </div>
 </div>

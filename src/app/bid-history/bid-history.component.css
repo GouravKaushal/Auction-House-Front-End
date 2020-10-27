@@ -1,0 +1,30 @@
+img{
+height: 110px;
+width: 160px;
+box-align: center;
+}
+
+td{
+  height: auto;
+  width:180px;
+  font-size: 16px;
+  color: black;
+  vertical-align:middle;
+  align-content: center;
+
+}
+thead{
+  width: auto;
+  height: auto;
+}
+th{
+  font-size: 16px;
+}
+.tb{
+  margin-top: 50px;
+}
+.cal{
+  background-color: black;
+  height: 90px;
+  width: 100%;
+}
